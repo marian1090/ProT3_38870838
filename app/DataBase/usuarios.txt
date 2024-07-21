@@ -1,0 +1,3 @@
+Admin: usuario:marian@gmail.com password:123456
+
+Cliente: usuario:titi@gmail.com password:123456 
