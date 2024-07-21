@@ -16,7 +16,8 @@
                 </div>
                 <div class="form-group">
                     <label>Apellido</label>
-                    <input type="text" name="apellido" class="form-control" value="<?php echo $user_obj['apellido']; ?>">
+                    <input type="text" name="apellido" class="form-control"
+                        value="<?php echo $user_obj['apellido']; ?>">
                 </div>
                 <div class="form-group">
                     <label>Email</label>
@@ -26,18 +27,15 @@
                     <label>Usuario</label>
                     <input type="text" name="usuario" class="form-control" value="<?php echo $user_obj['usuario']; ?>">
                 </div>
-                <div class="form-group">
-                    <label>Contaseña</label>
-                    <input type="password" name="password" class="form-control" value="<?php echo $user_obj['password']; ?>">
-                </div>
+
                 <div class="form-group py-2">
                     <button type="submit" class="btn btn-primary">Modificar</button>
                     <?php if ($session->get('logged_in') && $session->get('perfil_id') == 1) { ?>
-                        <a href="<?php echo base_url('/lista_usuario') ?>" class='btn btn-primary'>Volver</a>
+                    <a href="<?php echo base_url('/lista_usuario') ?>" class='btn btn-primary'>Volver</a>
                     <?php } elseif ($session->get('logged_in') && $session->get('perfil_id') == 2) { ?>
-                        <a href="<?php echo base_url('/dashboard') ?>" class='btn btn-primary'>Volver</a>
+                    <a href="<?php echo base_url('/dashboard') ?>" class='btn btn-primary'>Volver</a>
                     <?php } else { ?>
-                        <a href="<?php echo base_url('/') ?>" class="btn btn-secondary">Volver</a>
+                    <a href="<?php echo base_url('/') ?>" class="btn btn-secondary">Volver</a>
                     <?php } ?>
                 </div>
             </form>

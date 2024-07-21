@@ -42,9 +42,9 @@ $routes->get('/acerca', 'Home::acerca');
 // Ruta del logueo 
 $routes->get('/login', 'LoginController::index');
 $routes->post('/enviar-login', 'LoginController::ingresar');
-$routes->get('/dashboard', 'Dashboard::index');
-$routes->get('/dashboard_admin', 'Dashboard::panel');
-$routes->get('/logout', 'LoginController::logout');
+$routes->get('/dashboard', 'Dashboard::index',  ['filter' => 'auth']);
+$routes->get('/dashboard_admin', 'Dashboard::panel',  ['filter' => 'auth']);
+$routes->get('/logout', 'LoginController::logout',  ['filter' => 'auth']);
 
 // Ruta del registro de usuario
 $routes->get('/registrarse', 'UsuarioController::create');
